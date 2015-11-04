@@ -1,0 +1,6 @@
+include_directories(.)
+file(GLOB SRCS *.c modules/*.c)
+add_executable(geolocd ${SRCS})
+target_link_libraries(geolocd GeoIP)
+add_definitions(-DGEOLOC_GEOIP)
+add_custom_command(TARGET geolocd PRE_BUILD COMMAND yacc parse.y)

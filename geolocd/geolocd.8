@@ -1,0 +1,50 @@
+.\" $NetBSD: $
+.\"
+.\" Copyright (c) 2014, 2015 David Carlier <devnexen@gmail.com>
+.\"
+.\" Permission to use, copy, modify, and distribute this software for any
+.\" purpose with or without fee is hereby granted, provided that the above
+.\" copyright notice and this permission notice appear in all copies.
+.\"
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+.\" WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+.\" ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+.\" WHATSOEVER RESULTING FROM LOSS OF MIND, USE, DATA OR PROFITS, WHETHER IN
+.\" AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+.\" OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+.\"
+.Dd $Mdocdate: November 03 2015 $
+.Dt GEOLOCD 8
+.Os
+.Sh NAME
+.Nm geolocd
+.Nd geolocd daemon
+.Sh DESCRIPTION
+.Nm
+is a simple local daemon which gives geolocalization informations.
+.Pp
+The options are as follows:
+.Bl -tag -width xxxx
+.It d
+Do not daemonize. Run in foreground
+.It Fl f Ar file
+Alternative configuration file (default /etc/geolocd.conf)
+.Sh FILES
+.Bl -tag -width "/var/run/geolocd.sockXX"
+.It Pa /etc/geolocd.conf
+.Xr geolocd.8
+configuration file
+.It /var/run/geolocd.sock
+.Ux Ns -domain
+.Sh SEE ALSO
+.Xr geolocctl.8
+.El
+.Sh HISTORY
+The
+.Nm
+program first appeared in
+.Nx 7.99 .
+.Sh AUTHORS
+.An -nosplit
+Written by David Carlier Aq Mt devnexen@gmail.com
