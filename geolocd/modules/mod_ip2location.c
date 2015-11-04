@@ -16,6 +16,7 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifdef	GEOLOC_IP2LOCATION
 #include <IP2Location.h>
 
 #include "mod_ip2location.h"
@@ -104,4 +105,4 @@ struct backend ip2location_backend = {
     .gl_bsc     = ip2location_shutdown_callback,
     .ipv6capable= 1
 };
-
+#endif

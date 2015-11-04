@@ -55,7 +55,7 @@ main(int argc, char *argv[])
     extern char         *__progname;
 
     resdata[0] = '\0';
-    explicit_memset(&req, 0, sizeof(req));
+    bzero(&req, sizeof(req));
     req.type = MSG_CTL_NONE;
     req.field = MSG_NONE;
 
@@ -138,7 +138,7 @@ main(int argc, char *argv[])
         errx(1, "unknown user %s", GEOLOCD_USER);
 
     struct sockaddr_un sun;
-    explicit_memset(&sun, 0, sizeof(sun)); 
+    bzero(&sun, sizeof(sun)); 
     sun.sun_family = AF_UNIX;
     strlcpy(sun.sun_path, GEOLOCD_SOCKET, sizeof(sun.sun_path));
 

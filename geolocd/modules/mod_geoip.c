@@ -16,6 +16,7 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#ifdef	GEOLOC_GEOIP
 #include <GeoIP.h>
 
 #include "mod_geoip.h"
@@ -73,4 +74,4 @@ struct backend geoip_backend = {
     .gl_bsc     = geoip_shutdown_callback,
     .ipv6capable= 1
 };
-
+#endif
