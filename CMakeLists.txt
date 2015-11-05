@@ -4,9 +4,9 @@ find_path(GEOIP_INC GeoIP.h)
 
 
 file(GLOB DSRCS geolocd/*.c geolocd/modules/*.c)
-file(GLOB CTLSRCS geolocctl/*.c geolocd/log.c)
+file(GLOB CTLSRCS geolocctl/*.c geolocd/log.c geolocd/y*.c)
 
-set(CTLSRCS ${CTLSRCS} geolocd/y.tab.c)
+set(CTLSRCS ${CTLSRCS})
 
 include_directories(geolocd)
 
