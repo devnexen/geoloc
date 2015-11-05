@@ -4,3 +4,7 @@ add_custom_target(yacc_command COMMAND yacc -o geolocd/y.tab.c geolocd/parse.y)
 add_dependencies(yacc_command yacc_clean)
 add_subdirectory(geolocd)
 add_subdirectory(geolocctl)
+
+if (GEOLOC_INSTALL_PATH)
+	install(TARGETS geoloc geolocd DESTINATION ${GEOLOC_INSTALL_PATH}/sbin)
+endif()
