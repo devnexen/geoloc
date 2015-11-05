@@ -1,5 +1,6 @@
 include_directories(../geolocd)
-add_executable(geolocctl geolocctl.c ../geolocd/y.tab.c ../geolocd/log.c)
+file(GLOB SRCS *.c ../geolocd/log.c ../geolocd/y.tab.c)
+add_executable(geolocctl ${SRCS})
 add_dependencies(geolocctl geolocd)
 
 if (GEOLOC_INSTALL_PATH)
