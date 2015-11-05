@@ -13,7 +13,7 @@ include_directories(geolocd)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/build)
 add_executable(geolocd ${DSRCS})
 target_link_libraries(geolocd ${GEOIP_LIB})
-add_custom_command(TARGET geolocd PRE_BUILD COMMAND yacc -o y.tab.c parse.y WORKING_DIRECTORY geolocd)
+add_custom_command(TARGET geolocd PRE_BUILD COMMAND yacc -o ${CMAKE_CURRENT_SOURCE_DIR}/geolocd/y.tab.c ${CMAKE_CURRENT_SOURCE_DIR}/geolocd/parse.y)
 add_executable(geolocctl ${CTLSRCS})
 add_dependencies(geolocctl geolocd)
 
