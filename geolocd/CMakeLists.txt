@@ -7,3 +7,7 @@ add_executable(geolocd ${SRCS})
 target_link_libraries(geolocd ${GEOIP_LIB})
 add_definitions(-DGEOLOC_GEOIP)
 add_dependencies(geolocd yacc_command)
+
+if (GEOLOC_INSTALL_PATH)
+	install(TARGETS geolocd DESTINATION ${GEOLOC_INSTALL_PATH}/sbin)
+endif()
