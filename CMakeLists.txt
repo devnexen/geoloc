@@ -6,5 +6,5 @@ add_subdirectory(geolocd)
 add_subdirectory(geolocctl)
 
 if (GEOLOC_INSTALL_PATH)
-	install(TARGETS geoloc geolocd DESTINATION ${GEOLOC_INSTALL_PATH}/sbin)
+	install(TARGETS geolocctl geolocd DESTINATION ${GEOLOC_INSTALL_PATH}/sbin)
 endif()
