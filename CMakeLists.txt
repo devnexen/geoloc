@@ -5,7 +5,6 @@ find_path(GEOIP_INC GeoIP.h)
 
 file(GLOB DSRCS geolocd/*.c geolocd/modules/*.c)
 file(GLOB CTLSRCS geolocctl/*.c geolocd/log.c geolocd/y*.c)
-set_source_files_properties(geolocd/geoloc.c PROPERTIES OBJECT_DEPENDS geolocd/y.tab.c)
 
 set(CTLSRCS ${CTLSRCS})
 
