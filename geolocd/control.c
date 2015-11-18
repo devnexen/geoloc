@@ -21,6 +21,9 @@
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <sys/un.h>
+#ifdef  HAVE_NO_BSDFUNCS
+#include <bsd/string.h>
+#endif
 #include <errno.h>
 #include <fcntl.h>
 #include <stdlib.h>

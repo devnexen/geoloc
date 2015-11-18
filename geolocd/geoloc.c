@@ -26,6 +26,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#ifdef HAVE_NO_BSDFUNCS
+#include <bsd/unistd.h>
+#endif
+
 #include <err.h>
 #include <errno.h>
 #include <pwd.h>
